@@ -1,0 +1,57 @@
+ <!-- Navbar -->
+
+ <header>
+    <nav class="container flex items-center py-6 gap-2">
+        <div class="py-1">
+            <a href="javascript:void(0)" class="flex">
+                <p class="text-base text-dark text-3xl font-medium hover:text-primary ">INDIAN MASTIFF REGISTRY</p>
+            </a>
+        </div>
+        
+        <ul class="hidden lg:flex flex-1 justify-end items-center gap-12">
+            <% {[['https://indianmastiff.org/request/register', 'Register'],
+                 ['https://indianmastiff.org/locate', 'Verify']].map(([href, title]) => { %>
+                <li>
+                    <a href="<%= href %>" class="text-base text-dark font-medium hover:text-primary py-2"> <%= title %> </a>
+                </li>
+            <%  })} %>
+
+            <a href="#footer" class="rounded-lg bg-primary text-base text-white font-medium hover:bg-opacity-90 py-3 px-7">
+                Contact Us
+            </a>
+            </ul>
+        
+        <div class="flex lg:hidden flex-1 justify-end items-center gap-4">
+            <a href="#footer" class="rounded-lg bg-primary text-base text-white font-medium hover:bg-opacity-90 py-3 px-7 hidden sm:inline-flex">
+                    Contact Us
+            </a>
+            
+            <button class="rounded-lg ring-primary focus:ring-2 w-[54px] h-[18px] relative">
+                <input type="checkbox" class="peer absolute top-0 inset-x-0 w-full h-full z-10 cursor-pointer opacity-0">
+                <i class="text-4xl fa-solid fa-minus absolute left-0 top-0 -m-2.5 ml-2.5 transition-transform duration-500 rotate-0 peer-checked:rotate-45"></i>
+                <i class="text-4xl fa-solid fa-minus absolute left-0 top-0 -m-2.5 ml-2.5 transition-transform duration-500 rotate-0 peer-checked:-rotate-45"></i>
+
+                <!-- Content -->
+               <div class="absolute top-10 right-4 w-[250px] p-6 rounded-lg shadow overflow-hidden transition-all duration-500 hidden peer-checked:flex">
+                <ul class="flex flex-col justify-start items-center gap-4">
+                    <% {[['https://indianmastiff.org/request/register', 'Register'],
+                         ['https://indianmastiff.org/locate', 'Verify']].map(([href, title]) => { %>
+                        <li>
+                            <a href="<%= href %>" class="text-base text-dark font-medium hover:text-primary py-2"> <%= title %> </a>
+                        </li>
+                    <%  })} %>
+                </ul>
+               </div>
+            </button>
+               
+            
+            
+        </div>
+        
+            
+        
+            
+        
+    </nav>
+ </header>
+ 
