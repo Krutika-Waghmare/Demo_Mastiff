@@ -4,13 +4,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#2563EB',
-        'body-color': '#FAFAF9'
+        primary: '#1d4ed8',
+        secondary: '#34d399',
+        'body-color': '#6b7280'
       },
     },
     container: {
       center: true,
-      padding: '1rem',
+      padding: '2rem',
       screens: {
         md: '640px',
         lg: '768px',
