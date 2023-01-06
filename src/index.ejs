@@ -1,28 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="../dist/output.css" rel="stylesheet">
-</head>
-<body>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="../dist/output.css" rel="stylesheet" />
+  </head>
+  <body>
     <!-- Navbar Section Start -->
     <%- include("./src/navbar.ejs") %>
     <!-- Navbar Section End -->
-    
+
     <!-- Hero Section Start -->
     <%- include("./src/hero.ejs") %>
     <!-- Hero Section End -->
 
     <!-- Activities Section Start -->
     <div class="container relative">
-        <%- include("./src/details.ejs") %>
+        <% let data_1 = {title: "Activities", 
+        detail_1:"Registration:",
+        description_1: "Recording and maintaining pedigree database for public access.",
+        detail_2: "R&D:", 
+        description_2: "DNA profiling, Blood sampling, Bone & Muscle evaluation along with psychological factor impacting nature of dog.",
+        detail_3: "Education:",
+        description_3: "Breed specific education to public.",
+        detail_4: "Breeding:", 
+        description_4: "Supporting breeders with scientific knowledge of Gene pool, Labor process, Mother & puppy care.",
+        detail_5: "Veterinary:",
+        description_5: "Volunteering emergency veterinary practices with experts.",
+        detail_6: "Campaign",
+        description_6: "against Ear cropping, Tail docking, Puppy mills and Health awareness to enable puppy buyers to identify responsible breeders.",
+        show_1: 'block',
+        show_2: 'block' } %> 
+        <%- include("./src/details.ejs", data_1) %>
+
+        <!-- Background Design Start-->
+            <%- include("./src/bg-design.ejs") %>
+        <!-- Background Design End-->
     </div>
-    
     <!-- Activities Section End -->
 
-</body>
+    <!-- Objectives Section Start -->
+    <div class="container relative">
+        <% let data_2 = {title: "Objectives", 
+        detail_1:null,
+        description_1: "To record and maintain the pedigree registration database.",
+        detail_2:null, 
+        description_2: "To research and strengthen the genetic structure and its impact on breeding.",
+        detail_3:null,
+        description_3: "To standardize the breed focusing on Phenotype and Psychology.", 
+        detail_4:null,
+        description_4: "To advocate for scientific breeding practice.",
+        detail_5:null,
+        description_5: "To ensure that dogs live healthy, happy lives with responsible owners.",
+        detail_6:null,
+        description_6:null,
+        show_1: 'block',
+        show_2: 'hidden'} %> 
+        <%- include("./src/details.ejs", data_2) %>
+
+        <!-- Background Design Start-->
+            <%- include("./src/bg-design.ejs") %>
+        <!-- Background Design End-->
+    </div>
+    <!-- Objectives Section End -->
+
+    <!-- Footer Section Start -->
+    <%- include("./src/footer.ejs") %>
+    <!-- Footer Section End -->
+    
+  </body>
 </html>

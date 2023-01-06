@@ -1,153 +1,668 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="../dist/output.css" rel="stylesheet">
-</head>
-<body>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="../dist/output.css" rel="stylesheet" />
+  </head>
+  <body>
     <!-- Navbar Section Start -->
-     <!-- Navbar -->
+    <!-- Navbar -->
 
- <header>
-    <nav class="container flex items-center py-6 gap-2">
-        <div class="py-1">
-            <a href="javascript:void(0)" class="flex">
-                <p class="text-base text-dark text-3xl font-medium hover:text-primary ">INDIAN MASTIFF REGISTRY</p>
-            </a>
+<header>
+  <!-- nav tag as a container and flex -->
+  <nav class="container flex items-center py-6 gap-2">
+    <!-- heading -->
+    <div class="py-1">
+      <a href="javascript:void(0)" class="flex">
+        <p class="text-base text-dark text-3xl font-medium hover:text-primary">
+          INDIAN MASTIFF REGISTRY
+        </p>
+      </a>
+    </div>
+    <!-- Register and Verify links using map() with Contact Us button above lg screen -->
+    <ul class="hidden lg:flex flex-1 justify-end items-center gap-12">
+      
+      <li>
+        <a
+          href="https://indianmastiff.org/request/register"
+          class="text-base text-dark font-medium hover:text-primary py-2"
+        >
+          Register
+        </a>
+      </li>
+      
+      <li>
+        <a
+          href="https://indianmastiff.org/locate"
+          class="text-base text-dark font-medium hover:text-primary py-2"
+        >
+          Verify
+        </a>
+      </li>
+      
+      <!-- Contact Us button -->
+      <a
+        href="#footer"
+        class="rounded-lg bg-primary text-base text-white font-medium hover:bg-opacity-90 py-3 px-7"
+      >
+        Contact Us
+      </a>
+    </ul>
+    <!-- Mobile Menu navbar -->
+    <div class="flex lg:hidden flex-1 justify-end items-center gap-4">
+      <!-- Contact Us button -->
+      <a
+        href="#footer"
+        class="rounded-lg bg-primary text-base text-white font-medium hover:bg-opacity-90 py-3 px-7 hidden sm:inline-flex"
+      >
+        Contact Us
+      </a>
+      <!-- MObile Menu button with accordion -->
+      <button
+        class="rounded-lg ring-primary focus:ring-2 w-[54px] h-[18px] relative"
+      >
+        <input
+          type="checkbox"
+          class="peer absolute top-0 inset-x-0 w-full h-full z-10 cursor-pointer opacity-0"
+        />
+        <i
+          class="text-4xl text-body-color fa-solid fa-minus absolute left-0 top-0 -m-2.5 ml-2.5 transition-transform duration-500 rotate-0 peer-checked:rotate-45"
+        ></i>
+        <i
+          class="text-4xl text-body-color fa-solid fa-minus absolute left-0 top-0 -m-2.5 ml-2.5 transition-transform duration-500 rotate-0 peer-checked:-rotate-45"
+        ></i>
+
+        <!-- Mobile Menu Content with map() -->
+        <div
+          class="absolute top-10 right-4 w-[250px] md:w-[600px] bg-white p-6 rounded-lg shadow overflow-hidden transition-all duration-500 hidden peer-checked:flex z-10"
+        >
+          <ul class="flex flex-col md:flex-row justify-start items-center gap-4">
+            
+            <li>
+              <a
+                href="https://indianmastiff.org/request/register"
+                class="text-base text-dark font-medium hover:text-primary py-2"
+              >
+                Register
+              </a>
+            </li>
+            
+            <li>
+              <a
+                href="https://indianmastiff.org/locate"
+                class="text-base text-dark font-medium hover:text-primary py-2"
+              >
+                Verify
+              </a>
+            </li>
+            
+          </ul>
         </div>
-        
-        <ul class="hidden lg:flex flex-1 justify-end items-center gap-12">
-            
-                <li>
-                    <a href="https://indianmastiff.org/request/register" class="text-base text-dark font-medium hover:text-primary py-2"> Register </a>
-                </li>
-            
-                <li>
-                    <a href="https://indianmastiff.org/locate" class="text-base text-dark font-medium hover:text-primary py-2"> Verify </a>
-                </li>
-            
+      </button>
+    </div>
+  </nav>
+</header>
 
-            <a href="#footer" class="rounded-lg bg-primary text-base text-white font-medium hover:bg-opacity-90 py-3 px-7">
-                Contact Us
-            </a>
-            </ul>
-        
-        <div class="flex lg:hidden flex-1 justify-end items-center gap-4">
-            <a href="#footer" class="rounded-lg bg-primary text-base text-white font-medium hover:bg-opacity-90 py-3 px-7 hidden sm:inline-flex">
-                    Contact Us
-            </a>
-            
-            <button class="rounded-lg ring-primary focus:ring-2 w-[54px] h-[18px] relative">
-                <input type="checkbox" class="peer absolute top-0 inset-x-0 w-full h-full z-10 cursor-pointer opacity-0">
-                <i class="text-4xl fa-solid fa-minus absolute left-0 top-0 -m-2.5 ml-2.5 transition-transform duration-500 rotate-0 peer-checked:rotate-45"></i>
-                <i class="text-4xl fa-solid fa-minus absolute left-0 top-0 -m-2.5 ml-2.5 transition-transform duration-500 rotate-0 peer-checked:-rotate-45"></i>
-
-                <!-- Content -->
-               <div class="absolute top-10 right-4 w-[250px] p-6 rounded-lg shadow overflow-hidden transition-all duration-500 hidden peer-checked:flex z-10">
-                <ul class="flex flex-col justify-start items-center gap-4">
-                    
-                        <li>
-                            <a href="https://indianmastiff.org/request/register" class="text-base text-dark font-medium hover:text-primary py-2"> Register </a>
-                        </li>
-                    
-                        <li>
-                            <a href="https://indianmastiff.org/locate" class="text-base text-dark font-medium hover:text-primary py-2"> Verify </a>
-                        </li>
-                    
-                </ul>
-               </div>
-            </button>
-               
-            
-            
-        </div>
-        
-            
-        
-            
-        
-    </nav>
- </header>
- 
     <!-- Navbar Section End -->
-    
+
     <!-- Hero Section Start -->
     <!-- Hero -->
 
-    <div class="container flex flex-col-reverse md:flex-col lg:flex-row items-center gap-12 mt-6 lg:mt-10">
-        <!-- Content -->
-        <div class="flex flex-1 flex-col-reverse md:flex-col items-center md:items-start md:mr-auto md:ml-0">
-            <div class="text-center md:text-left">
-                <h1 class="text-dark text-4xl font-bold leading-snug mb-3 sm:text-[42px] lg:text-[40px] xl:text-[42px]">
-                    Single dog<br>
-                    Litter / puppy<br>
-                    Change Owner<br>
-                    Breeder Kennel <br>
-                </h1>
-                <p class="text-base text-3xl text-body-color max-w-[480px] mb-8">Reviving the legacy <br> of Indian Mastiff Dog</p>
-            </div>
-            <div class="text-center md:text-left">
-                <p class="text-base text-body-color text-light max-w-[480px] md:max-w-[310px] mb-12">
-                    We are nonprofit organization devoted to health, welfare and training of Indian Mastiff dog;
-                    Registered with<br> UDYAM-MH-30-0022485 Government of India.
-                </p>
-                <ul class="flex flex-wrap gap-2 items-center justify-around md:justify-start my-10">
-                    <li>
-                        <a href="https://indianmastiff.org/request/register" class="items-center justify-center rounded-lg bg-primary py-4 px-10 text-center text-base font-normal text-white hover:bg-opacity-90">
-                            Register
-                        </a>
-                    </li>
-                    <li class="">
-                        <a href="https://indianmastiff.org/locate" class="items-center justify-center rounded-lg bg-secondary py-4 px-12 text-center text-base font-normal text-white hover:bg-opacity-90">
-                            Verify
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!-- Image -->
-        <div class="flex flex-1 justify-end md:ml-auto md:mr-0">
-            <div class="relative">
-            <img src="https://via.placeholder.com/400" alt="placeholder-img" class="rounded-3xl">
-            <!-- Dots Design -->
-            <span class="absolute -left-8 -bottom-8 z-[-1]">
-                <svg width="93" height="93" viewBox="0 0 93 93" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="2.5" cy="2.5" r="2.5" fill="#3056D3" />
-                    <circle cx="2.5" cy="24.5" r="2.5" fill="#3056D3" />
-                    <circle cx="2.5" cy="46.5" r="2.5" fill="#3056D3" />
-                    <circle cx="2.5" cy="68.5" r="2.5" fill="#3056D3" />
-                    <circle cx="2.5" cy="90.5" r="2.5" fill="#3056D3" />
-                    <circle cx="24.5" cy="2.5" r="2.5" fill="#3056D3" />
-                    <circle cx="24.5" cy="24.5" r="2.5" fill="#3056D3" />
-                    <circle cx="24.5" cy="46.5" r="2.5" fill="#3056D3" />
-                    <circle cx="24.5" cy="68.5" r="2.5" fill="#3056D3" />
-                    <circle cx="24.5" cy="90.5" r="2.5" fill="#3056D3" />
-                    <circle cx="46.5" cy="2.5" r="2.5" fill="#3056D3" />
-                    <circle cx="46.5" cy="24.5" r="2.5" fill="#3056D3" />
-                    <circle cx="46.5" cy="46.5" r="2.5" fill="#3056D3" />
-                    <circle cx="46.5" cy="68.5" r="2.5" fill="#3056D3" />
-                    <circle cx="46.5" cy="90.5" r="2.5" fill="#3056D3" />
-                    <circle cx="68.5" cy="2.5" r="2.5" fill="#3056D3" />
-                    <circle cx="68.5" cy="24.5" r="2.5" fill="#3056D3" />
-                    <circle cx="68.5" cy="46.5" r="2.5" fill="#3056D3" />
-                    <circle cx="68.5" cy="68.5" r="2.5" fill="#3056D3" />
-                    <circle cx="68.5" cy="90.5" r="2.5" fill="#3056D3" />
-                    <circle cx="90.5" cy="2.5" r="2.5" fill="#3056D3" />
-                    <circle cx="90.5" cy="24.5" r="2.5" fill="#3056D3" />
-                    <circle cx="90.5" cy="46.5" r="2.5" fill="#3056D3" />
-                    <circle cx="90.5" cy="68.5" r="2.5" fill="#3056D3" />
-                    <circle cx="90.5" cy="90.5" r="2.5" fill="#3056D3" />
-                </svg>
-            </span>
-        </div>
-        </div>
+<div
+  class="container flex flex-col-reverse md:flex-col lg:flex-row items-center gap-12 mt-6 lg:mt-10"
+>
+  <!-- Content -->
+  <div
+    class="flex flex-1 flex-col-reverse md:flex-col items-center md:items-start md:mr-auto md:ml-0"
+  >
+    <div class="text-center md:text-left">
+      <h1
+        class="text-dark text-4xl font-bold leading-snug mb-3 sm:text-[42px] lg:text-[40px] xl:text-[42px]"
+      >
+        Single dog<br />
+        Litter / puppy<br />
+        Change Owner<br />
+        Breeder Kennel <br />
+      </h1>
+      <p class="text-base text-3xl text-body-color max-w-[480px] mb-8">
+        Reviving the legacy <br />
+        of Indian Mastiff Dog
+      </p>
     </div>
+    <div class="text-center md:text-left">
+      <p
+        class="text-base text-body-color text-light max-w-[480px] md:max-w-[310px] mb-12"
+      >
+        We are nonprofit organization devoted to health, welfare and training of
+        Indian Mastiff dog; Registered with<br />
+        UDYAM-MH-30-0022485 Government of India.
+      </p>
+      <ul
+        class="flex flex-wrap gap-2 items-center justify-around md:justify-start my-10"
+      >
+        <li>
+          <a
+            href="https://indianmastiff.org/request/register"
+            class="items-center justify-center rounded-lg bg-primary py-4 px-10 text-center text-base font-normal text-white hover:bg-opacity-90"
+          >
+            Register
+          </a>
+        </li>
+        <li class="">
+          <a
+            href="https://indianmastiff.org/locate"
+            class="items-center justify-center rounded-lg bg-secondary py-4 px-12 text-center text-base font-normal text-white hover:bg-opacity-90"
+          >
+            Verify
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- Image -->
+  <div class="flex flex-1 justify-end md:ml-auto md:mr-0">
+    <div class="relative">
+      <img
+        src="https://via.placeholder.com/400"
+        alt="placeholder-img"
+        class="rounded-3xl"
+      />
+      <!-- Dots Design -->
+      <span class="absolute -left-8 -bottom-8 z-[-1]">
+        <svg
+          width="93"
+          height="93"
+          viewBox="0 0 93 93"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="2.5" cy="2.5" r="2.5" fill="#3056D3" />
+          <circle cx="2.5" cy="24.5" r="2.5" fill="#3056D3" />
+          <circle cx="2.5" cy="46.5" r="2.5" fill="#3056D3" />
+          <circle cx="2.5" cy="68.5" r="2.5" fill="#3056D3" />
+          <circle cx="2.5" cy="90.5" r="2.5" fill="#3056D3" />
+          <circle cx="24.5" cy="2.5" r="2.5" fill="#3056D3" />
+          <circle cx="24.5" cy="24.5" r="2.5" fill="#3056D3" />
+          <circle cx="24.5" cy="46.5" r="2.5" fill="#3056D3" />
+          <circle cx="24.5" cy="68.5" r="2.5" fill="#3056D3" />
+          <circle cx="24.5" cy="90.5" r="2.5" fill="#3056D3" />
+          <circle cx="46.5" cy="2.5" r="2.5" fill="#3056D3" />
+          <circle cx="46.5" cy="24.5" r="2.5" fill="#3056D3" />
+          <circle cx="46.5" cy="46.5" r="2.5" fill="#3056D3" />
+          <circle cx="46.5" cy="68.5" r="2.5" fill="#3056D3" />
+          <circle cx="46.5" cy="90.5" r="2.5" fill="#3056D3" />
+          <circle cx="68.5" cy="2.5" r="2.5" fill="#3056D3" />
+          <circle cx="68.5" cy="24.5" r="2.5" fill="#3056D3" />
+          <circle cx="68.5" cy="46.5" r="2.5" fill="#3056D3" />
+          <circle cx="68.5" cy="68.5" r="2.5" fill="#3056D3" />
+          <circle cx="68.5" cy="90.5" r="2.5" fill="#3056D3" />
+          <circle cx="90.5" cy="2.5" r="2.5" fill="#3056D3" />
+          <circle cx="90.5" cy="24.5" r="2.5" fill="#3056D3" />
+          <circle cx="90.5" cy="46.5" r="2.5" fill="#3056D3" />
+          <circle cx="90.5" cy="68.5" r="2.5" fill="#3056D3" />
+          <circle cx="90.5" cy="90.5" r="2.5" fill="#3056D3" />
+        </svg>
+      </span>
+    </div>
+  </div>
+</div>
 
     <!-- Hero Section End -->
 
-</body>
+    <!-- Activities Section Start -->
+    <div class="container relative">
+         
+        <!-- template for Avtivities and Objectives Section -->
+<div class="flex flex-1 flex-col gap-10">
+    <!-- Activities / Objectives heading -->
+    <div class="flex items-center justify-center mt-6 md:mt-12 lg:mt-8">
+        <h2 class="text-3xl sm:text-4xl md:text-[40px] font-bold text-dark">
+            Activities 
+        </h2>
+    </div>
+    <!-- Content. detail, description will be passed from index.ejs,
+         classes show_1, show_2 will be passed to hide/show content,
+         map() is used to loop and display the contents -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-3 gap-8">
+         
+                <div>
+                    <span class="block">
+                        <div class="rounded-lg border border-[#F3F4FE] bg-white p-4 sm:p-8 lg:px-6 xl:px-8 min-h-[122px]">
+                            <h4 class="text-lg font-semibold text-black">
+                                <span class="block"> Registration: <br></span>
+                                Recording and maintaining pedigree database for public access.
+                            </h4>
+                        </div>
+                    </span>
+                </div>
+         
+                <div>
+                    <span class="block">
+                        <div class="rounded-lg border border-[#F3F4FE] bg-white p-4 sm:p-8 lg:px-6 xl:px-8 min-h-[122px]">
+                            <h4 class="text-lg font-semibold text-black">
+                                <span class="block"> R&amp;D: <br></span>
+                                DNA profiling, Blood sampling, Bone &amp; Muscle evaluation along with psychological factor impacting nature of dog.
+                            </h4>
+                        </div>
+                    </span>
+                </div>
+         
+                <div>
+                    <span class="block">
+                        <div class="rounded-lg border border-[#F3F4FE] bg-white p-4 sm:p-8 lg:px-6 xl:px-8 min-h-[122px]">
+                            <h4 class="text-lg font-semibold text-black">
+                                <span class="block"> Education: <br></span>
+                                Breed specific education to public.
+                            </h4>
+                        </div>
+                    </span>
+                </div>
+         
+                <div>
+                    <span class="block">
+                        <div class="rounded-lg border border-[#F3F4FE] bg-white p-4 sm:p-8 lg:px-6 xl:px-8 min-h-[122px]">
+                            <h4 class="text-lg font-semibold text-black">
+                                <span class="block"> Breeding: <br></span>
+                                Supporting breeders with scientific knowledge of Gene pool, Labor process, Mother &amp; puppy care.
+                            </h4>
+                        </div>
+                    </span>
+                </div>
+         
+                <div>
+                    <span class="block">
+                        <div class="rounded-lg border border-[#F3F4FE] bg-white p-4 sm:p-8 lg:px-6 xl:px-8 min-h-[122px]">
+                            <h4 class="text-lg font-semibold text-black">
+                                <span class="block"> Veterinary: <br></span>
+                                Volunteering emergency veterinary practices with experts.
+                            </h4>
+                        </div>
+                    </span>
+                </div>
+         
+                <div>
+                    <span class="block">
+                        <div class="rounded-lg border border-[#F3F4FE] bg-white p-4 sm:p-8 lg:px-6 xl:px-8 min-h-[122px]">
+                            <h4 class="text-lg font-semibold text-black">
+                                <span class="block"> Campaign <br></span>
+                                against Ear cropping, Tail docking, Puppy mills and Health awareness to enable puppy buyers to identify responsible breeders.
+                            </h4>
+                        </div>
+                    </span>
+                </div>
+         
+    </div>
+</div>
+
+        <!-- Background Design Start-->
+            <!-- Background Design -->
+<div class="absolute bottom-0 -right-36 z-[-1]">
+    <svg width="1440" height="886" viewBox="0 0 1440 886" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path opacity="0.5" d="M193.307 -273.321L1480.87 1014.24L1121.85 1373.26C1121.85 1373.26 731.745 983.231 478.513 729.927C225.976 477.317 -165.714 85.6993 -165.714 85.6993L193.307 -273.321Z" fill="url(#paint0_linear)"></path>
+        <defs>
+            <linearGradient id="paint0_linear" x1="1308.65" y1="1142.58" x2="602.827" y2="-418.681" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#3056D3" stop-opacity="0.36"></stop>
+                <stop offset="1" stop-color="#F5F2FD" stop-opacity="0"></stop>
+                <stop offset="1" stop-color="#F5F2FD" stop-opacity="0.096144"></stop>
+            </linearGradient>
+        </defs>
+    </svg>
+</div>
+        <!-- Background Design End-->
+    </div>
+    <!-- Activities Section End -->
+
+    <!-- Objectives Section Start -->
+    <div class="container relative">
+         
+        <!-- template for Avtivities and Objectives Section -->
+<div class="flex flex-1 flex-col gap-10">
+    <!-- Activities / Objectives heading -->
+    <div class="flex items-center justify-center mt-6 md:mt-12 lg:mt-8">
+        <h2 class="text-3xl sm:text-4xl md:text-[40px] font-bold text-dark">
+            Objectives 
+        </h2>
+    </div>
+    <!-- Content. detail, description will be passed from index.ejs,
+         classes show_1, show_2 will be passed to hide/show content,
+         map() is used to loop and display the contents -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-3 gap-8">
+         
+                <div>
+                    <span class="block">
+                        <div class="rounded-lg border border-[#F3F4FE] bg-white p-4 sm:p-8 lg:px-6 xl:px-8 min-h-[122px]">
+                            <h4 class="text-lg font-semibold text-black">
+                                <span class="hidden">  <br></span>
+                                To record and maintain the pedigree registration database.
+                            </h4>
+                        </div>
+                    </span>
+                </div>
+         
+                <div>
+                    <span class="block">
+                        <div class="rounded-lg border border-[#F3F4FE] bg-white p-4 sm:p-8 lg:px-6 xl:px-8 min-h-[122px]">
+                            <h4 class="text-lg font-semibold text-black">
+                                <span class="hidden">  <br></span>
+                                To research and strengthen the genetic structure and its impact on breeding.
+                            </h4>
+                        </div>
+                    </span>
+                </div>
+         
+                <div>
+                    <span class="block">
+                        <div class="rounded-lg border border-[#F3F4FE] bg-white p-4 sm:p-8 lg:px-6 xl:px-8 min-h-[122px]">
+                            <h4 class="text-lg font-semibold text-black">
+                                <span class="hidden">  <br></span>
+                                To standardize the breed focusing on Phenotype and Psychology.
+                            </h4>
+                        </div>
+                    </span>
+                </div>
+         
+                <div>
+                    <span class="block">
+                        <div class="rounded-lg border border-[#F3F4FE] bg-white p-4 sm:p-8 lg:px-6 xl:px-8 min-h-[122px]">
+                            <h4 class="text-lg font-semibold text-black">
+                                <span class="hidden">  <br></span>
+                                To advocate for scientific breeding practice.
+                            </h4>
+                        </div>
+                    </span>
+                </div>
+         
+                <div>
+                    <span class="block">
+                        <div class="rounded-lg border border-[#F3F4FE] bg-white p-4 sm:p-8 lg:px-6 xl:px-8 min-h-[122px]">
+                            <h4 class="text-lg font-semibold text-black">
+                                <span class="hidden">  <br></span>
+                                To ensure that dogs live healthy, happy lives with responsible owners.
+                            </h4>
+                        </div>
+                    </span>
+                </div>
+         
+                <div>
+                    <span class="hidden">
+                        <div class="rounded-lg border border-[#F3F4FE] bg-white p-4 sm:p-8 lg:px-6 xl:px-8 min-h-[122px]">
+                            <h4 class="text-lg font-semibold text-black">
+                                <span class="hidden">  <br></span>
+                                
+                            </h4>
+                        </div>
+                    </span>
+                </div>
+         
+    </div>
+</div>
+
+        <!-- Background Design Start-->
+            <!-- Background Design -->
+<div class="absolute bottom-0 -right-36 z-[-1]">
+    <svg width="1440" height="886" viewBox="0 0 1440 886" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path opacity="0.5" d="M193.307 -273.321L1480.87 1014.24L1121.85 1373.26C1121.85 1373.26 731.745 983.231 478.513 729.927C225.976 477.317 -165.714 85.6993 -165.714 85.6993L193.307 -273.321Z" fill="url(#paint0_linear)"></path>
+        <defs>
+            <linearGradient id="paint0_linear" x1="1308.65" y1="1142.58" x2="602.827" y2="-418.681" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#3056D3" stop-opacity="0.36"></stop>
+                <stop offset="1" stop-color="#F5F2FD" stop-opacity="0"></stop>
+                <stop offset="1" stop-color="#F5F2FD" stop-opacity="0.096144"></stop>
+            </linearGradient>
+        </defs>
+    </svg>
+</div>
+        <!-- Background Design End-->
+    </div>
+    <!-- Objectives Section End -->
+
+    <!-- Footer Section Start -->
+    <!-- footer Section -->
+<footer id="footer" class="relative">
+  <div class="container flex flex-1 gap-6 my-12 items-center justify-center">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+      <!-- Contact -->
+      <div class="row-start-1">
+        <p
+          class="flex mb-6 py-2 text-base font-medium text-dark hover:text-primary lg:inline-flex text-3xl"
+        >
+          INDIAN MASTIFF REGISTRY
+        </p>
+        <p class="mb-4 text-lg font-semibold text-dark">Office</p>
+        <p class="mb-7 text-base text-body-color">
+          Prabuddha Agriculture ltd.<br />
+          Mangalwar peth, Phaltan<br />
+          D-Satara 415523 Maharashtra<br />
+          Contact: 9975517222<br />
+
+          <span class="text-primary mt-0">prabuddha.group@oksbi</span>
+        </p>
+      </div>
+      <!-- Founder, Chairman -->
+      <div class="sm:row-start-2 lg:row-start-1">
+        <h4 class="mb-4 text-lg font-semibold text-dark">Founder, Chairman</h4>
+        <ul>
+          <li
+            class="mb-2 inline-block text-base leading-loose text-body-color hover:text-primary"
+          >
+            Siddhartha Datta Ahiwale
+          </li>
+        </ul>
+      </div>
+      <!-- Core Members -->
+      <div class="sm:row-start-2 lg:row-start-1">
+        <h4 class="mb-4 text-lg font-semibold text-dark">Core Members</h4>
+        <ul>
+            
+                <li>
+                    <a
+                     href="javascript:void(0)"
+                     class="inline-block text-base leading-loose text-body-color hover:text-primary"
+                    >
+                     Director : Shilraj Kolhe 
+                    </a>
+                </li>
+            
+                <li>
+                    <a
+                     href="javascript:void(0)"
+                     class="inline-block text-base leading-loose text-body-color hover:text-primary"
+                    >
+                     R&amp;amp;D: Adinath Ghadage 
+                    </a>
+                </li>
+            
+                <li>
+                    <a
+                     href="javascript:void(0)"
+                     class="inline-block text-base leading-loose text-body-color hover:text-primary"
+                    >
+                     IT : Harshdeep Lagad 
+                    </a>
+                </li>
+            
+                <li>
+                    <a
+                     href="javascript:void(0)"
+                     class="inline-block text-base leading-loose text-body-color hover:text-primary"
+                    >
+                     Library: Akshay Salve 
+                    </a>
+                </li>
+            
+                <li>
+                    <a
+                     href="javascript:void(0)"
+                     class="inline-block text-base leading-loose text-body-color hover:text-primary"
+                    >
+                     Relations: Kunal Malke 
+                    </a>
+                </li>
+            
+                <li>
+                    <a
+                     href="javascript:void(0)"
+                     class="inline-block text-base leading-loose text-body-color hover:text-primary"
+                    >
+                     Social Media: Pruthvi Sanjay 
+                    </a>
+                </li>
+             
+        </ul>
+      </div>
+      <!-- Honorary Members -->
+      <div class="sm:row-start-3 lg:row-start-1">
+        <h4 class="mb-4 text-lg font-semibold text-dark">
+          Honorary Member of Board
+        </h4>
+        <ul>
+            
+                <li>
+                    <a
+                     href="javascript:void(0)"
+                     class="inline-block text-base leading-loose text-body-color hover:text-primary"
+                    >
+                     Karanvir Singh, Punjab 
+                    </a>
+                </li>
+            
+                <li>
+                    <a
+                     href="javascript:void(0)"
+                     class="inline-block text-base leading-loose text-body-color hover:text-primary"
+                    >
+                     Manu Bishnoi, Haryana 
+                    </a>
+                </li>
+            
+                <li>
+                    <a
+                     href="javascript:void(0)"
+                     class="inline-block text-base leading-loose text-body-color hover:text-primary"
+                    >
+                     Pradeep Dahiya, Haryana 
+                    </a>
+                </li>
+            
+                <li>
+                    <a
+                     href="javascript:void(0)"
+                     class="inline-block text-base leading-loose text-body-color hover:text-primary"
+                    >
+                     Amit Khangwal, Haryana 
+                    </a>
+                </li>
+            
+                <li>
+                    <a
+                     href="javascript:void(0)"
+                     class="inline-block text-base leading-loose text-body-color hover:text-primary"
+                    >
+                     Sonu Latiwal, Haryana 
+                    </a>
+                </li>
+            
+                <li>
+                    <a
+                     href="javascript:void(0)"
+                     class="inline-block text-base leading-loose text-body-color hover:text-primary"
+                    >
+                     Sachin Gulia, Haryana 
+                    </a>
+                </li>
+            
+                <li>
+                    <a
+                     href="javascript:void(0)"
+                     class="inline-block text-base leading-loose text-body-color hover:text-primary"
+                    >
+                     Dr Amardeep Sambherwal 
+                    </a>
+                </li>
+            
+                <li>
+                    <a
+                     href="javascript:void(0)"
+                     class="inline-block text-base leading-loose text-body-color hover:text-primary"
+                    >
+                     Aadesh Kotecha, Jalana 
+                    </a>
+                </li>
+            
+                <li>
+                    <a
+                     href="javascript:void(0)"
+                     class="inline-block text-base leading-loose text-body-color hover:text-primary"
+                    >
+                     Akshay Pawar, Pune 
+                    </a>
+                </li>
+             
+        </ul>
+      </div>
+      <!-- Social Media -->
+      <div class="sm:row-start-3 lg:row-start-1">
+        <h4 class="mb-9 text-lg font-semibold text-dark">Follow Us On</h4>
+        <div class="mb-6 flex items-center">
+            <a href="https://www.facebook.com/alangu.bohli" class="mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-[#E5E5E5] text-dark hover:border-primary hover:bg-primary hover:text-white sm:mr-4 lg:mr-3 xl:mr-4" target="_blank">
+              <i class='bx bxl-facebook'></i>
+            </a>
+            <a href="https://wa.me/+919975517222" class="mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-[#E5E5E5] text-dark hover:border-primary hover:bg-primary hover:text-white sm:mr-4 lg:mr-3 xl:mr-4" target="_blank">
+              <i class='bx bxl-whatsapp'></i>
+            </a>
+        </div>
+    </div>
+    </div>
+  </div>
+  <!-- Background Circle Designs -->
+  <div>
+        <span class="absolute left-0 bottom-0 z-[1]">
+            <svg width="217" height="229" viewBox="0 0 217 229" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M-64 140.5C-64 62.904 -1.096 1.90666e-05 76.5 1.22829e-05C154.096 5.49924e-06 217 62.904 217 140.5C217 218.096 154.096 281 76.5 281C-1.09598 281 -64 218.096 -64 140.5Z" fill="url(#paint0_linear_1179_5)" />
+                <defs>
+                    <linearGradient id="paint0_linear_1179_5" x1="76.5" y1="281" x2="76.5" y2="1.22829e-05" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#3056D3" stop-opacity="0.08" />
+                        <stop offset="1" stop-color="#C4C4C4" stop-opacity="0" />
+                    </linearGradient>
+                </defs>
+            </svg>
+        </span>
+        <span class="absolute top-4 right-10 z-[-1]">
+            <svg width="75" height="75" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M37.5 -1.63918e-06C58.2107 -2.54447e-06 75 16.7893 75 37.5C75 58.2107 58.2107 75 37.5 75C16.7893 75 -7.33885e-07 58.2107 -1.63918e-06 37.5C-2.54447e-06 16.7893 16.7893 -7.33885e-07 37.5 -1.63918e-06Z" fill="url(#paint0_linear_1179_4)" />
+                <defs>
+                    <linearGradient id="paint0_linear_1179_4" x1="-1.63917e-06" y1="37.5" x2="75" y2="37.5" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#13C296" stop-opacity="0.31" />
+                        <stop offset="1" stop-color="#C4C4C4" stop-opacity="0" />
+                    </linearGradient>
+                </defs>
+            </svg>
+        </span>
+    </div>
+  <!-- Copyright Section -->
+  <div class="flex p-6 bg-gray-200 justify-around">
+            <div>
+                <span>© 2022-23 Copyright:</span>
+                <span class="text-gray-600 font-semibold" >Indianmastiff</span>
+            </div>
+            <div>
+                <span>Designed & Developed By:</span>
+                <a class="text-gray-600 font-semibold" href="https://stackzeal.com">Stackzeal Pvt ltd</a>
+            </div>
+        </div>
+</footer>
+
+    <!-- Footer Section End -->
+    
+  </body>
 </html>

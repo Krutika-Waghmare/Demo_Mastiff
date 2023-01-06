@@ -1,5 +1,31 @@
-<div class="flex flex-1">
-    <div class="grid grid-cols-1 md:grid-cols-2 grid-rows-3 gap-8">
-        
+<!-- template for Avtivities and Objectives Section -->
+<div class="flex flex-1 flex-col gap-10">
+    <!-- Activities / Objectives heading -->
+    <div class="flex items-center justify-center mt-6 md:mt-12 lg:mt-8">
+        <h2 class="text-3xl sm:text-4xl md:text-[40px] font-bold text-dark">
+            <%= title %> 
+        </h2>
+    </div>
+    <!-- Content. detail, description will be passed from index.ejs,
+         classes show_1, show_2 will be passed to hide/show content,
+         map() is used to loop and display the contents -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-3 gap-8">
+        <% {[[detail_1, description_1, show_1, show_2],
+             [detail_2, description_2, show_1, show_2],
+             [detail_3, description_3, show_1, show_2],
+             [detail_4, description_4, show_1, show_2],
+             [detail_5, description_5, show_1, show_2],
+             [detail_6, description_6, show_2, show_2]].map(([detail, description, show1, show2]) => { %> 
+                <div>
+                    <span class="<%= show1 %>">
+                        <div class="rounded-lg border border-[#F3F4FE] bg-white p-4 sm:p-8 lg:px-6 xl:px-8 min-h-[122px]">
+                            <h4 class="text-lg font-semibold text-black">
+                                <span class="<%= show2 %>"> <%= detail %> <br></span>
+                                <%= description %>
+                            </h4>
+                        </div>
+                    </span>
+                </div>
+        <% })} %> 
     </div>
 </div>
