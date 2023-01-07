@@ -13,8 +13,8 @@
     </div>
     <!-- Register and Verify links using map() with Contact Us button above lg screen -->
     <ul class="hidden lg:flex flex-1 justify-end items-center gap-12">
-      <% {[['https://indianmastiff.org/request/register', 'Register'],
-      ['https://indianmastiff.org/locate', 'Verify']].map(([href, title]) => {
+      <% {[['./register.html', 'Register'],
+           ['./verify.html', 'Verify']].map(([href, title]) => {
       %>
       <li>
         <a
@@ -62,8 +62,8 @@
           class="absolute top-10 right-4 w-[250px] md:w-[600px] bg-white p-6 rounded-lg shadow overflow-hidden transition-all duration-500 hidden peer-checked:flex z-10"
         >
           <ul class="flex flex-col md:flex-row justify-start items-center gap-4">
-            <% {[['https://indianmastiff.org/request/register', 'Register'],
-            ['https://indianmastiff.org/locate', 'Verify']].map(([href, title]) => { %>
+            <% {[['./register.html', 'Register'],
+                 ['./verify.html', 'Verify']].map(([href, title]) => { %>
             <li>
               <a
                 href="<%= href %>"
